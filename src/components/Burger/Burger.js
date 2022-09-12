@@ -1,30 +1,32 @@
-import {bool, func} from "prop-types"
+import React from "react";
+import { bool, func } from "prop-types";
 
-import { Twirl as Hamburger } from "hamburger-react"
+import { Twirl as Hamburger } from "hamburger-react";
 
-import StyledBurger from './Burger.styled'
+import { StyledBurger } from "./Burger.styled";
 
-const Burger = ({open, setOpen, ...props}) => {
+const Burger = ({ open, setOpen, ...props }) => {
   const isExpanded = open ? true : false;
 
   return (
     <StyledBurger>
       <Hamburger
-        toggled = {open}
+        toggled={open}
         toggle={setOpen}
         size={32}
-        direction= {0.4}
-        distance={'lg'}
+        direction='right'
+        duration={0.4}
+        distance='lg'
         aria-expanded={isExpanded}
-        color={open ? "2b3252" : 'ef5455'}
-      ></Hamburger>
+        color={open ? "#191919" : "#B88746"}
+      />
     </StyledBurger>
-  )
-}
+  );
+};
 
 Burger.propTypes = {
   open: bool.isRequired,
-  setOpen: func.isRequired
-}
+  setOpen: func.isRequired,
+};
 
-export default Burger
+export default Burger;
