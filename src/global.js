@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
     align-items: center;
 
-    background: ${({theme}) => theme.primaryDark}
+    background: ${({theme}) => theme.primaryDark};
     color: ${({theme}) => theme.primaryLight};
 
     height: 100vh;
